@@ -1,9 +1,9 @@
-###Concurrency sample for Java EE7
+### Concurrency sample for Java EE7
 
 This application on demonstrates how to use managed executors, managed scheduled executors and context service to perform tasks in parallel in a simple application.
 
-###WAS Liberty
-####Maven
+### WAS Liberty
+#### Maven
 
 The sample can be built using Apache Maven. In the directory where you cloned the repository issue the following command to build the source.
 
@@ -13,7 +13,7 @@ Then, in the concurrency-webapp directory issue the following command to run it 
 
   `$ mvn liberty:run-server`
 
-####WebSphere Development Tools (WDT)
+#### WebSphere Development Tools (WDT)
 
 The WebSphere Development Tools (WDT) for Eclipse can be used to control the server (start/stop/dump/etc.), it also supports incremental publishing with minimal restarts, working with a debugger to step through your applications, etc.
 
@@ -30,7 +30,7 @@ To import the source code into Eclipse/WDT:
 2.	Browse... to the top level directory titled sample.javaee7.concurrency
 3.	Verify all three boxes are checked and select Finish
 
-####Manual Deployment
+#### Manual Deployment
 1.	Add following features to your server.xml 
         
     ```
@@ -59,7 +59,7 @@ To import the source code into Eclipse/WDT:
 5.	Run the sample by hitting the following URL using your servers hostname and port
 [http://hostname:port/sample.javaee7.concurrency/](http://hostname:port/sample.javaee7.concurrency/)
 
-###WAS Classic
+### WAS Classic
 
 Configure required resources
 
@@ -74,7 +74,7 @@ Configure required resources
         $ connect 'jdbc:derby:DefaultDB;create=true';
     - The default Derby database is created in the following directory: ${WAS_INSTALL_ROOT}/derby/DefaultDB
 
-####Install using wsadmin tool
+#### Install using wsadmin tool
 
 1. Start wsadmin tool with Jython option 
 2. Run command 
@@ -82,7 +82,7 @@ Configure required resources
 
 3. Save configuration 
 
-####Install using the Administrative Console
+#### Install using the Administrative Console
 
 1.	In your preferred browser, go to the Integrated Solutions Console; for example: [http://hostname:9060/ibm/console/]
 (http://hostname:9060/ibm/console/)
