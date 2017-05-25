@@ -13,7 +13,7 @@ Then, in the same directory issue the following command to run it on a Liberty s
 
   `$ mvn liberty:run-server`
 
-You can connect to the sample at [http://hostname:port/sample.javaee7.concurrency/ConcurrencySample](http://hostname:port/sample.javaee7.concurrency/ConcurrencySample).
+You can connect to the application at [http://hostname:port/sample.javaee7.concurrency/ConcurrencySample](http://hostname:port/sample.javaee7.concurrency/ConcurrencySample).
 
 #### WebSphere Development Tools (WDT)
 
@@ -58,7 +58,7 @@ To import the source code into Eclipse/WDT:
     
 3.	Install the sample app to your server by copying sample.javaee7.concurrency.war that was made from running: " mvn install"
 4.	Start the server.
-5.	Run the sample by hitting the following URL using your servers hostname and port
+5.	Run the sample by hitting the following URL using your server's hostname and port
 [http://hostname:port/sample.javaee7.concurrency/ConcurrencySample](http://hostname:port/sample.javaee7.concurrency/ConcurrencySample)
 
 ### WAS Classic
