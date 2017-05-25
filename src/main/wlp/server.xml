@@ -1,23 +1,29 @@
-<server description="new server">
+<server description="Concurrency Sample">
 
-<featureManager>
-    <feature>concurrent-1.0</feature>
-    <feature>jpa-2.1</feature>
-    <feature>jsp-2.3</feature>
-      <feature>localConnector-1.0</feature>
+    <featureManager>
+        <feature>concurrent-1.0</feature>
+        <feature>servlet-3.1</feature>
+        <feature>jsp-2.3</feature>
+        <feature>jpa-2.1</feature>
+        <feature>jdbc-4.1</feature>
+        <feature>jndi-1.0</feature>
+        <feature>jaxrs-2.0</feature>
+        <feature>localConnector-1.0</feature>
     </featureManager>
 
     <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
 
-  <dataSource id="DefaultDataSource">
-    <jdbcDriver libraryRef="DerbyLib"/>
-    <properties.derby.embedded createDatabase="create" databaseName="${shared.resource.dir}/data/concurrentsampledb"/>
-  </dataSource>
-  <library id="DerbyLib">
-    <file name="${server.config.dir}/derby/derby.jar"/>
-  </library>
+    <library id="DerbyLib">
+        <file name="${wlp.user.dir}/shared/resource/derby/derby.jar"/>
+    </library>
+
+    <dataSource id="DefaultDataSource" jndiName="ee7-concurrency-sample">
+        <jdbcDriver libraryRef="DerbyLib"/>
+        <properties.derby.embedded databaseName="${wlp.user.dir}/shared/resource/derby/concurrentsampledb" createDatabase="create"/>
+    </dataSource>
 
     <applicationMonitor updateTrigger="mbean"/>
 
-    <webApplication id="sample.javaee7.concurrency" location="sample.javaee7.concurrency.war" name="sample.javaee7.concurrency"/>
+    <application name="sample.javaee7.concurrency" context-root="/sample.javaee7.concurrency" location="${appLocation}" type="war" />
+
 </server>
